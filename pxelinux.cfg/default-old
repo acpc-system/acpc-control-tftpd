@@ -1,0 +1,5 @@
+DEFAULT install
+LABEL install
+  KERNEL linux
+  INITRD initrd
+  APPEND root=/dev/ram0 ramdisk_size=1500000 ip=dhcp iso-url=https://cdimage.ubuntu.com/ubuntu-server/daily-live/20230616/mantic-live-server-amd64.iso ---

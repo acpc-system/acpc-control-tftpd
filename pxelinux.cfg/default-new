@@ -1,0 +1,20 @@
+default LocalBoot
+
+label LocalBoot
+	menu label ^Local boot
+	menu default
+	localboot 0
+
+
+label ACPC node
+        menu label ^1- ACPC node
+        kernel vmlinuz
+	append auto=true priority=critical preseed/locale=en_US preseed/language=en vga=normal preseed/url=http://172.20.16.2/roles/contestant/preseed.cfg initrd=initrd  -- quiet
+
+
+
+label cli
+        menu label ^Command-line install
+        kernel ubuntu-installer/i386/linux
+	append tasks=standard pkgsel/language-pack-patterns= pkgsel/install-language-support=false vga=788 initrd=ubuntu-installer/i386/initrd.gz -- quiet
+
