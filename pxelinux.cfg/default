@@ -7,10 +7,10 @@ label acpcserver
 	menu label ^1- ACPC Server
 	kernel vmlinuz
 	initrd initrd
-	append root=/dev/ram0 ramdisk_size=2000000 autoinstall ip=dhcp cloud-config-url=http://172.20.16.2/yml/jammy/legacy/server/user-data url=http://172.20.16.2/iso/ubuntu-22.04.2-live-server-amd64.iso ds=nocloud-net;s=http://172.20.16.2/yml/jammy/legacy/server/  ## Dont forget add / at the end of url 
+	append root=/dev/ram0 ramdisk_size=2000000 autoinstall ip=dhcp cloud-config-url=http://control.local/yml/jammy/legacy/server/user-data url=http://control.local/iso/ubuntu-22.04.2-live-server-amd64.iso ds=nocloud-net;s=http://control.local/yml/jammy/legacy/server/  ## Dont forget add / at the end of url 
 
 label acpcdesktop
         menu label ^2- ACPC Desktop
 	kernel vmlinuz
 	initrd initrd
-	append root=/dev/ram0 ramdisk_size=2000000 autoinstall ip=dhcp cloud-config-url=http://172.20.16.2/yml/jammy/legacy/desktop/user-data url=http://172.20.16.2/iso/ubuntu-22.04.2-live-server-amd64.iso ds=nocloud-net;s=http://172.20.16.2/yml/jammy/legacy/desktop/ 	##Dont forget add / at the end of url
+	append root=/dev/ram0 ramdisk_size=2000000 autoinstall ip=dhcp cloud-config-url=http://control.local/yml/jammy/legacy/desktop/user-data url=http://control.local/iso/ubuntu-22.04.2-live-server-amd64.iso ds=nocloud-net;s=http://control.local/yml/jammy/legacy/desktop/ 	##Dont forget add / at the end of url
